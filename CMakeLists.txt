@@ -19,7 +19,7 @@ SET(SWIG_DIR /usr/local CACHE STRING "directory containing SWIG.")
 # Wrappers:
 
 # Define statements:
-OPTION(ENABLE_DOXYGEN "use Doxgen to build developer documentation" 1)
+#OPTION(ENABLE_DOXYGEN "use Doxgen to build developer documentation" 1)
 #OPTION(WRAP_PYTHON "use structure library from python" 0)
 #OPTION(WRAP_JAVA "use structure library from java" 0)
 
@@ -39,14 +39,14 @@ FILE(APPEND ${LMC_SOURCE_DIR}/src/config.h "#define _LMC_SRC_PATH \"${LMC_SOURCE
 AUX_SOURCE_DIRECTORY(src LMC_SRC)
 
 #################################
-find_package(Doxygen)
-IF(DOXYGEN_FOUND)
-	OPTION(ENABLE_DOXYGEN "Enables building of documentation with doxygen" 1)
-	IF(ENABLE_DOXYGEN)
-		ADD_SUBDIRECTORY(dox)
-		#ADD_CUSTOM_TARGET(doc ALL ${DOXYGEN_EXECUTABLE} ${TPS_SOURCE_DIR}/Doxyfile)
-	ENDIF(ENABLE_DOXYGEN)
-ENDIF(DOXYGEN_FOUND)
+#find_package(Doxygen)
+#IF(DOXYGEN_FOUND)
+#	OPTION(ENABLE_DOXYGEN "Enables building of documentation with doxygen" 1)
+#	IF(ENABLE_DOXYGEN)
+#		ADD_SUBDIRECTORY(dox)
+#		#ADD_CUSTOM_TARGET(doc ALL ${DOXYGEN_EXECUTABLE} ${TPS_SOURCE_DIR}/Doxyfile)
+#	ENDIF(ENABLE_DOXYGEN)
+#ENDIF(DOXYGEN_FOUND)
 #################################
 
 #################################
